@@ -1,6 +1,5 @@
 import express from "express";
 var request = require("request");
-import serverless from "serverless-http";
 const server = express();
 const PORT = 3333;
 
@@ -75,5 +74,3 @@ server.get("/", (req: any, res: any) => {
   res.send("Welcome Santichai Yarasit Test API");
 });
 server.listen(PORT, () => console.log(`Server is started at port ${PORT}`));
-
-export const handler = serverless(server);

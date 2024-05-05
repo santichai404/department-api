@@ -3,10 +3,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.handler = void 0;
 const express_1 = __importDefault(require("express"));
 var request = require("request");
-const serverless_http_1 = __importDefault(require("serverless-http"));
 const server = (0, express_1.default)();
 const PORT = 3333;
 server.get("/department", (req, res) => {
@@ -67,4 +65,3 @@ server.get("/", (req, res) => {
     res.send("Welcome Santichai Yarasit Test API");
 });
 server.listen(PORT, () => console.log(`Server is started at port ${PORT}`));
-exports.handler = (0, serverless_http_1.default)(server);
